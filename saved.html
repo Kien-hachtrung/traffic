@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f9f6">
+    <meta name="description" content="Your saved places.">
+    <title>Saved places | Traffic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="saved.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Wayfinder home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M16 3.5 26 8v8.1c0 6.3-4.2 10.2-10 12.4-5.8-2.2-10-6.1-10-12.4V8l10-4.5Z" fill="currentColor" opacity=".15"/><path d="m11.2 20.8 3-7.1 7-3-3 7.1-7 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="16.2" cy="15.8" r="1.4" fill="currentColor"/></svg>
+        </span>
+        <span>Traffic<span class="brand-period">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main menu">
+        <a class="nav-link" href="index.html">Explore</a>
+        <a class="nav-link is-current" href="saved.html" aria-current="page">Saved places</a>
+        <a class="nav-link" id="saved-account-manager-link" href="index.html#account-manager" hidden>Account manager</a>
+        <a class="nav-link" id="saved-account-settings-link" href="settings.html" hidden>Settings</a>
+      </nav>
+      <div class="account-actions">
+        <span class="signed-in-label" id="saved-user-label" hidden></span>
+        <button class="button button-quiet sign-out-button" id="saved-sign-out" type="button" hidden>Log out</button>
+      </div>
+    </header>
+    <main class="saved-main" id="saved-main" hidden>
+      <section class="saved-page" aria-labelledby="saved-title">
+        <div class="saved-heading">
+          <h1 id="saved-title">Saved places</h1>
+          <a class="button button-dark button-small" href="index.html">Explore map</a>
+        </div>
+        <p class="saved-feedback" id="saved-feedback" role="status" aria-live="polite"></p>
+        <div class="saved-list" id="saved-list"></div>
+      </section>
+    </main>
+  </body>
+</html>
